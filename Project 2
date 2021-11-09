@@ -1,0 +1,42 @@
+//***************************************************************
+// TimeConverter.java		
+//		
+// Tyler Shipton T00691413
+// COMP 1131 Assignment 1 Question 2
+// This program prompts the users input in seconds and displays
+// the equivalent time in the format HH:MM:SS.
+//***************************************************************
+import java.util.Scanner;
+
+public class TimeConverter
+{
+
+
+	public static void main(String[]	args)
+	{
+	
+		Scanner scan = new Scanner(System.in);
+		
+		int seconds;
+		int SEC_IN_MIN= 60;
+		int SEC_IN_HOUR = 3600;
+
+		// prompts the user the number they wish to convert
+		System.out.print("Enter the number of seconds you wish" +
+		" to convert into hours, minutes and seconds: ");
+		seconds = scan.nextInt();
+		
+		// calculates the result of seconds into hours, minutes, and 
+		// seconds using the modular operation and division.
+		int hours = seconds / SEC_IN_HOUR;
+		int minutes = (seconds % SEC_IN_HOUR) / SEC_IN_MIN;
+		int TOTAL_SECONDS = seconds % SEC_IN_MIN;
+
+	
+		// prints the users input number and the result
+		System.out.println("You enterered: " + seconds + " seconds.");
+		System.out.println(seconds + " converted into HH:MM:SS is: ");
+		System.out.println(hours + ": " +  minutes + ": " + TOTAL_SECONDS);	
+	}
+	
+}
