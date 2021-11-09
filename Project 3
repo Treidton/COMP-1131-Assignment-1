@@ -1,0 +1,40 @@
+//***************************************************************
+// DecimalConverter.java				
+// Tyler Shipton T00691413
+//  COMP 1131 Assignment 1 Question 3
+// This program prompts the user for a fraction and prints the decimal
+// conversion.
+//***************************************************************
+
+import java.util.Scanner;
+public class DecimalConverter
+{
+	
+	public static void main(String[]	args)
+	{
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("This program will show the decimal equivalent" 
+			+ "of a fraction given.");
+		System.out.println("\nPlease follow the following instructions.");
+		
+		// prompts user for the numerator and denominator of the fraction to be converted.
+		System.out.print("\nEnter the numerator:");
+		int numerator = scan.nextInt();
+		
+		System.out.print("Enter the denominator:");
+		int denominator = scan.nextInt();
+		
+		
+		// calculates the fraction into decimal
+		 double decimal = (double) numerator / (double) denominator;
+		
+		
+		// displays the results
+		System.out.println("You entered the fraction: " + (int)numerator + "/" + 
+			(int)denominator + "." + "\nThe decimal equivalent is: " + decimal);
+		
+		}
+		
+}
+		
