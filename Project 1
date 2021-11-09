@@ -1,0 +1,38 @@
+//***************************************************************
+// WeightConverter.java				
+// Tyler Shipton T00691413
+//  COMP 1131 Assignment 1 Question 1
+// This program prompts the users input in pounds and converts it
+// to the equivalent weight in kilograms.
+//***************************************************************
+import java.util.Scanner;
+public class WeightConverter
+{
+
+//--------------------------------------------------------------
+// Calculates the conversion of kilograms from the users
+// input in pounds using the method of kilo = pounds * 0.45349237.
+//--------------------------------------------------------------
+
+	public static void main(String[]	args)
+	{	
+	
+		double kilograms;
+		float pounds;
+		final double KILO_CONVERSION = 0.45359237; 		
+	
+		Scanner scan = new Scanner(System.in);
+	
+		// prompts the users the weight in pounds they wish to convert
+		System.out.print("Enter the weight in pounds: ");
+		pounds = scan.nextFloat();					
+	
+	
+		// prints the users input and the conversion into kilograms.
+		System.out.println("You entered: " + (float)pounds + " pounds.");
+		System.out.println("The weight in kilograms is: " + pounds *
+		KILO_CONVERSION);		
+	}
+	
+}
+	
